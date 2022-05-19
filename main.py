@@ -2,11 +2,11 @@ from flask import Flask
 app = Flask('app')
 
 @app.route('/')
-def hello_world():
+def test_show_hello():
   return '<h1>Meu primeiro template</h1>'
 
 @app.route('/unifran')
-def unifran ():
+def test_show_unifran():
   return '<h2>Universidade de Franca</h2>'
 
 @app.route('/dashboard/<nome>')
