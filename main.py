@@ -1,13 +1,13 @@
-from flask import Flask
+from flask import Flask, render_template
 app = Flask('app')
 
 @app.route('/')
 def test_show_hello():
-  return '<h1>Meu primeiro template</h1>'
+  return render_template('index.html')
 
 @app.route('/unifran')
 def test_show_unifran():
-  return '<h2>Universidade de Franca</h2>'
+  return render_template('unifran.html')
   
 if __name__ == '__main__':
   app.run(host='0.0.0.0')
